@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+body {
+  background: #09090b;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #ff6b00;
+  color: white;
+}
+/* Hide default cursor */
+
+body{
+  cursor:none;
+}
+
+a,
+button{
+  cursor:none;
+}
