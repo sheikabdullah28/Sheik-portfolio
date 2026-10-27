@@ -7,14 +7,14 @@ const projects = [
   {
     title: "CampusHub",
     category: "College Management System",
-    image: "/projects/campushub.png",
+    image: "/projects/campushub.jpeg",
     description:
       "A centralized college management app with attendance, timetable, assignments and fee tracking.",
   },
   {
     title: "Foodie",
     category: "Food Delivery App",
-    image: "/projects/foodie.png",
+    image: "/projects/foodie.jpeg",
     description:
       "A modern food ordering experience focused on speed, usability and clean mobile UI.",
   },
