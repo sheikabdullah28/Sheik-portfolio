@@ -1,29 +1,29 @@
+
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const projects = [
   {
     title: "CampusHub",
     category: "College Management System",
-    image: "/projects/campushub.jpeg",
+    image: "/Projects/CampusHub.jpeg",
     description:
       "A centralized college management app with attendance, timetable, assignments and fee tracking.",
   },
   {
     title: "Foodie",
     category: "Food Delivery App",
-    image: "/projects/foodie.jpeg",
+    image: "/Projects/Foodie.jpeg",
     description:
       "A modern food ordering experience focused on speed, usability and clean mobile UI.",
   },
   {
-    title: "Smart Hotel",
-    category: "Hotel Management System",
-    image: "/projects/hostel.png",
+    title: "Smart Hostel",
+    category: "Hostel Management System",
+    image: "/Projects/hostel.png",
     description:
-      "Digital hotel management with complaints, rooms, visitors and fee management.",
+      "A hostel management dashboard for students and wardens.",
   },
 ];
 
@@ -49,19 +49,21 @@ export default function Projects() {
             key={project.title}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: index * 0.15 }}
-            whileHover={{
-              y: -10,
-            }}
+            whileHover={{ y: -10 }}
             className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl"
           >
-            <Image
-              src={project.image}
-              alt={project.title}
-              width={600}
-              height={400}
-              className="h-56 w-full object-cover transition duration-500 hover:scale-105"
-            />
+            <div className="h-56 w-full overflow-hidden">
+              <img
+                src={project.image}
+                alt={project.title}
+                width={600}
+                height={400}
+                className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                loading="lazy"
+              />
+            </div>
 
             <div className="p-8">
               <p className="mb-2 text-sm uppercase tracking-widest text-orange-400">
@@ -76,7 +78,10 @@ export default function Projects() {
                 {project.description}
               </p>
 
-              <button className="mt-8 text-orange-400 transition hover:translate-x-2">
+              <button
+                type="button"
+                className="mt-8 text-orange-400 transition hover:translate-x-2"
+              >
                 View Case Study →
               </button>
             </div>
